@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(../fonts/poppins-medium-webfont.woff);
+}
+
+body {
+    font-family: 'poppins', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.hero {
+    display: flex;
+    min-height: 100vh;
+    background-color: orangered;
+    background-image: url(img/web\ sleepillow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+.main {
+    z-index: 1;
+    margin: 0 auto;
+    padding-top: 2rem;
+
+    width: 80%;
+}
+
+.main .logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+
+}
+
+ul li {
+    background-color: white;
+    display: flex;
+    justify-content: start;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    margin: 2rem 0;
+
+}
+
+ul li:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 0.5s;
+}
+
+.main ul li .img-link {
+    margin-right: 2rem;
+}
+
+.main ul li a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 1.5rem;
+    letter-spacing: 13px;
+    margin: 0 auto;
+
+}
+
+
+
+
+/* responsive */
+/* laptope */
+@media (max-width:1200px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+/* tablet */
+@media (max-width:768px) {
+    html {
+        font-size: 80%;
+    }
+
+    .hero {
+        background-image: url(img/phone.png);
+    }
+
+    .main ul li a {
+        letter-spacing: 4px;
+    }
+
+
+}
+
+/* phone */
+@media (max-width:550px) {
+    html {
+        font-size: 70%;
+    }
+
+
+}
